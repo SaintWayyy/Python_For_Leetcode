@@ -10,13 +10,14 @@ s2 = "string2"
 
 # String literals that are part of a single expression and have only whitespace between them
 # will be implicitly converted to a single string literal. That is, ("spam " "eggs") == "spam eggs".
-print("spam " "eggs" == "spam eggs")
+# print("spam " "eggs" == "spam eggs")
 
 # A backslash can be added at the end of a line to ignore the newline:
-
 s3 = 'This string will not include \
 backslashes or newline characters.'
-print(s3)
+
+
+# print(s3)
 
 
 def _str():
@@ -49,7 +50,38 @@ def _ord():
 # _ord()
 
 
-def _format():
+def str_count():
+    # str.count(sub[, start[, end]]) Return the number of non-overlapping occurrences of substring sub in the range [
+    # start, end]. Optional arguments start and end are interpreted as in slice notation. If sub is empty,
+    # returns the number of empty strings between characters which is the length of the string plus one.
+    print("aaaa".count("aa"))
+
+
+# str_count()
+
+
+def str_find():
+    # str.find(sub[, start[, end]])
+    # Return the lowest index in the string where substring sub is found within the slice s[start:end].
+    # Optional arguments start and end are interpreted as in slice notation. Return -1 if sub is not found.
+    print("aa aa aa".find("aa"))
+
+
+# str_find()
+
+
+def str_rfind():
+    # str.rfind(sub[, start[, end]])
+    # Return the highest index in the string where substring sub is found,
+    # such that sub is contained within s[start:end].
+    # Optional arguments start and end are interpreted as in slice notation. Return -1 on failure.
+    print("aa aa aa".rfind("aa"))
+
+
+# str_rfind()
+
+
+def str_format():
     # format(value, format_spec='')
     # Convert a value to a “formatted” representation, as controlled by format_spec.
     print('{}, {}, {}'.format('a', 'b', 'c'))
@@ -61,4 +93,86 @@ def _format():
     print('{2}, {1}, {0}'.format(*'abc'))
 
 
-_format()
+# str_format()
+
+def str_islower():
+    # str.islower()
+    # Return True if all cased characters in the string are lowercase
+    # and there is at least one cased character, False otherwise.
+    pass
+
+
+def str_isupper():
+    # str.isupper()
+    # Return True if all cased characters in the string are uppercase
+    # and there is at least one cased character, False otherwise.
+    pass
+
+
+def str_join():
+    # str.join(iterable)
+    # Return a string which is the concatenation of the strings in iterable.
+    pass
+
+
+def str_lower():
+    # str.lower()
+    # Return a copy of the string with all the cased characters converted to lowercase.
+    pass
+
+
+def str_upper():
+    # str.upper()
+    # Return a copy of the string with all the cased characters converted to uppercase.
+    pass
+
+
+def str_strip():
+    # str.strip([chars])
+    # Return a copy of the string with the leading and trailing characters removed.
+    # The chars argument is a string specifying the set of characters to be removed.
+    # If omitted or None, the chars argument defaults to removing whitespace.
+    # The chars argument is not a prefix or suffix; rather, all combinations of its values are stripped:
+    pass
+
+
+def str_lstrip():
+    # str.lstrip([chars])
+    # Return a copy of the string with leading characters removed.
+    # The chars argument is a string specifying the set of characters to be removed.
+    # If omitted or None, the chars argument defaults to removing whitespace.
+    # The chars argument is not a prefix; rather, all combinations of its values are stripped.
+    pass
+
+
+def str_rstrip():
+    # str.rstrip([chars])
+    # Return a copy of the string with trailing characters removed.
+    # The chars argument is a string specifying the set of characters to be removed.
+    # If omitted or None, the chars argument defaults to removing whitespace.
+    # The chars argument is not a suffix; rather, all combinations of its values are stripped.
+    pass
+
+
+def str_replace():
+    # str.replace(old, new[, count])
+    # Return a copy of the string with all occurrences of substring old replaced by new.
+    # If the optional argument count is given, only the first count occurrences are replaced.
+    pass
+
+
+def str_split():
+    # str.split(sep=None, maxsplit=- 1)
+    # Return a list of the words in the string, using sep as the delimiter string.
+    # If maxsplit is given, at most maxsplit splits are done (thus, the list will have at most maxsplit+1 elements).
+    # If maxsplit is not specified or -1, then there is no limit on the number of splits (all possible splits are made).
+    pass
+
+
+def str_rsplit():
+    # str.rsplit(sep=None, maxsplit=- 1)
+    # Return a list of the words in the string, using sep as the delimiter string.
+    # If maxsplit is given, at most maxsplit splits are done, the rightmost ones.
+    # If sep is not specified or None, any whitespace string is a separator.
+    # Except for splitting from the right, rsplit() behaves like split() which is described in detail below.
+    pass

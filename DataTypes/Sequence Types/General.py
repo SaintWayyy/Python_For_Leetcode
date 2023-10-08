@@ -14,31 +14,17 @@ class Num:
 Common Sequence Operations
 """
 
-
-def _add():
-    # s + t: the concatenation of s and t
-    print(num_list1 + num_list2)
-
-
-# _add()
-
-
-# Operations
-def _in():
-    # x in s: True if an item of s is equal to x, else False
-    print(1 in num_list1)
-    print("gg" in "eggs")
-
-
-# _in()
-
-
-def _not_in():
-    # x not in s: False if an item of s is equal to x, else True
-    print(1 not in num_list1)
-
-
-# _not_in()
+# # s + t: the concatenation of s and t
+# print(num_list1 + num_list2)
+#
+# # Operations
+#
+# # x in s: True if an item of s is equal to x, else False
+# print(1 in num_list1)
+# print("gg" in "eggs")
+#
+# # x not in s: False if an item of s is equal to x, else True
+# print(1 not in num_list1)
 
 
 def _multiply():
@@ -77,7 +63,9 @@ def _index():
 
     # s.index(x[, i[, j]]):
     # index of the first occurrence of x in s (at or after index i and before index j)
+    # raise ValueError when the x is not found.
     print(num_list1.index(1))
+    # print(num_list1.index(-1))
     print(num_list1.index(1, -100, 100))
 
 
@@ -132,59 +120,90 @@ def _slicing():
 """
 Mutable Sequence Types Operations
 """
-# s[i] = x: item i of s is replaced by x
-num_list1[0] = 50
-print(num_list1)
 
-# s[i:j] = t: slice of s from i to j is replaced by the contents of the iterable t
-num_list1[:1] = [6, 5, 4]
-print(num_list1)
 
-# del s[i:j]: same as s[i:j] = []
-del num_list1[:3]
-print(num_list1)
+# # s[i] = x: item i of s is replaced by x
+# num_list1[0] = 50
+# print(num_list1)
+#
+# # s[i:j] = t: slice of s from i to j is replaced by the contents of the iterable t
+# num_list1[:1] = [6, 5, 4]
+# print(num_list1)
+#
+# # del s[i:j]: same as s[i:j] = []
+# del num_list1[:3]
+# print(num_list1)
+#
+# # s[i:j:k] = t: The elements of s[i:j:k] are replaced by those of t
+# # t must have the same length as the slice it is replacing.
+# num_list1[0:4:2] = ["a", "b"]
+# print(num_list1)
+#
+# # del s[i:j:k]: removes the elements of s[i:j:k] from the list
+# del num_list1[0:4:2]
+# print(num_list1)
+#
+# # s.extend(t) or s += t: extends s with the contents of t
+# # (for the most part the same as s[len(s):len(s)] = t)
+# num_list1 += [1, 2, 3, 4, 5]
+# print(num_list1)
+#
+# # s *= n: updates s with its contents repeated n times
+# # Items in the sequence are not copied; they are referenced multiple times, as explained for s * n
+# num_list1 *= 2
+# print(num_list1)
 
-# s[i:j:k] = t: The elements of s[i:j:k] are replaced by those of t
-# t must have the same length as the slice it is replacing.
-num_list1[0:4:2] = ["a", "b"]
-print(num_list1)
 
-# del s[i:j:k]: removes the elements of s[i:j:k] from the list
-del num_list1[0:4:2]
-print(num_list1)
+def _append():
+    # s.append(x): appends x to the end of the sequence (same as s[len(s):len(s)] = [x])
+    num_list1.append(6)
+    num_list1[len(num_list1):] = [7]
+    num_list1.append(["3", "2", "1"])
+    print(num_list1)
 
-# s.append(x): appends x to the end of the sequence (same as s[len(s):len(s)] = [x])
-num_list1.append(6)
-num_list1[len(num_list1):] = [7]
-num_list1.append(["3", "2", "1"])
-print(num_list1)
 
-# s.clear(): removes all items from s (same as del s[:])
-num_list1.clear()
-print(num_list1)
+# _append()
 
-# s.extend(t) or s += t: extends s with the contents of t
-# (for the most part the same as s[len(s):len(s)] = t)
-num_list1 += [1, 2, 3, 4, 5]
-print(num_list1)
 
-# s *= n: updates s with its contents repeated n times
-# Items in the sequence are not copied; they are referenced multiple times, as explained for s * n
-num_list1 *= 2
-print(num_list1)
+def _clear():
+    # s.clear(): removes all items from s (same as del s[:])
+    num_list1.clear()
+    print(num_list1)
 
-# s.insert(i, x): inserts x into s at the index given by i (same as s[i:i] = [x])
-num_list1.insert(0, 0)
-print(num_list1)
 
-# s.pop() or s.pop(i): retrieves the item at i and also removes it from s
-num_list1.pop(len(num_list1) - 1)
-print(num_list1)
+# _clear()
 
-# s.remove(x): remove the first item from s where s[i] is equal to x
-num_list1.remove(0)
-print(num_list1)
 
-# s.reverse(): reverses the items of s in place
-num_list1.reverse()
-print(num_list1)
+def _insert():
+    # s.insert(i, x): inserts x into s at the index given by i (same as s[i:i] = [x])
+    num_list1.insert(0, 0)
+    print(num_list1)
+
+
+# _insert()
+
+
+def _pop():
+    # s.pop() or s.pop(i): retrieves the item at i and also removes it from s
+    num_list1.pop(len(num_list1) - 1)
+    print(num_list1)
+
+
+# _pop()
+
+
+def _remove():
+    # s.remove(x): remove the first item from s where s[i] is equal to x
+    num_list1.remove(0)
+    print(num_list1)
+
+
+# _remove()
+
+
+def _reverse():
+    # s.reverse(): reverses the items of s in place
+    num_list1.reverse()
+    print(num_list1)
+
+# _reverse()

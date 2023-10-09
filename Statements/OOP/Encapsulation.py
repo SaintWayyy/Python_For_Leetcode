@@ -13,8 +13,7 @@ class Base:
                  protected_field="protected field",
                  private_field="private_field"):
         self.public_field = public_field
-        self._protected
-        _field = protected_field
+        self._protected_field = protected_field
         self.__private_field = private_field
 
     def _protected_method(self):

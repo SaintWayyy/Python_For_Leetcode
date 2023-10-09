@@ -14,11 +14,8 @@ class Num:
 Common Sequence Operations
 """
 
-
 # # s + t: the concatenation of s and t
 # print(num_list1 + num_list2)
-#
-# # Operations
 #
 # # x in s: True if an item of s is equal to x, else False
 # print(1 in num_list1)
@@ -170,6 +167,24 @@ def _clear():
 
 
 # _clear()
+
+
+def _copy():
+    # s.copy()
+    # creates a shallow copy of s (same as s[:])
+    l1 = [[1],[2]]
+    l2 = l1.copy()
+
+    l2[0] = 0
+    print(l1)
+    print(l2)
+
+    l2[1][0] = 99
+    print(l1)
+    print(l2)
+
+
+# _copy()
 
 
 def _extend():

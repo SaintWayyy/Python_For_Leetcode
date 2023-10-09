@@ -1,1 +1,0 @@
-print("a".join("b"))

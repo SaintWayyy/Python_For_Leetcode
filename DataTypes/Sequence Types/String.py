@@ -197,20 +197,29 @@ def str_replace():
 
 
 def str_split():
-    # str.split(sep=None, maxsplit=- 1)
+    # str.split(sep=None, maxsplit=-1)
     # Return a list of the words in the string, using sep as the delimiter string.
     # If maxsplit is given, at most maxsplit splits are done (thus, the list will have at most maxsplit+1 elements).
     # If maxsplit is not specified or -1, then there is no limit on the number of splits (all possible splits are made).
-    pass
+    print(",".split(","))
+    print("1,2,3".split(","))
+    print(",1,,2,3,".split(","))
+    print("aaa".split("a"))
 
 
 str_split()
 
 
 def str_rsplit():
-    # str.rsplit(sep=None, maxsplit=- 1)
+    # str.rsplit(sep=None, maxsplit=-1)
     # Return a list of the words in the string, using sep as the delimiter string.
     # If maxsplit is given, at most maxsplit splits are done, the rightmost ones.
     # If sep is not specified or None, any whitespace string is a separator.
-    # Except for splitting from the right, rsplit() behaves like split() which is described in detail below.
-    pass
+    # Except for splitting from the right, rsplit() behaves like split().
+    print(",".rstrip(","))
+    print("1,2,3".rsplit(","))
+    print(",1,,2,3,".rsplit(","))
+    print("aaa".rsplit("a"))
+
+
+# str_rsplit()

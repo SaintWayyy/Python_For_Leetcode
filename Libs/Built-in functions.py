@@ -167,11 +167,14 @@ def _map():
     # If additional iterables arguments are passed,
     # function must take that many arguments and is applied to the items from all iterables in parallel.
     # With multiple iterables, the iterator stops when the shortest iterable is exhausted.
-
     it = map(lambda x: print(x, end=" "), num_list)
     for _ in it:
         pass
     print()
+
+    it = map(lambda x, y: print(x, y), num_list, bool_list)
+    for _ in it:
+        pass
 
 
 # _map()

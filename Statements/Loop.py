@@ -1,5 +1,6 @@
 num_int = 0
 
+# In either kind of loop, the else clause is not executed if the loop was terminated by a break.
 while num_int < 5:
     print(num_int, end=" ")
     num_int += 1
@@ -11,6 +12,10 @@ else:
 
 for i in range(0, 5):
     print(i, end=" ")
+else:
+    # Optional else statement
+    # Executed after the loop reaches its final iteration.
+    print("too big")
 print()
 
 

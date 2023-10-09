@@ -236,7 +236,7 @@ def _round():
     print(round(1.5))
 
 
-_round()
+# _round()
 
 
 def _slice():
@@ -261,6 +261,7 @@ def _sorted():
     print(num_list)
     print(sorted(num_list))
     print(num_list)
+    print(sorted("124144513"))
 
 
 # _sorted()

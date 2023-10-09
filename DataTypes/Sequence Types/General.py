@@ -14,6 +14,7 @@ class Num:
 Common Sequence Operations
 """
 
+
 # # s + t: the concatenation of s and t
 # print(num_list1 + num_list2)
 #
@@ -143,10 +144,7 @@ Mutable Sequence Types Operations
 # del num_list1[0:4:2]
 # print(num_list1)
 #
-# # s.extend(t) or s += t: extends s with the contents of t
-# # (for the most part the same as s[len(s):len(s)] = t)
-# num_list1 += [1, 2, 3, 4, 5]
-# print(num_list1)
+
 #
 # # s *= n: updates s with its contents repeated n times
 # # Items in the sequence are not copied; they are referenced multiple times, as explained for s * n
@@ -172,6 +170,18 @@ def _clear():
 
 
 # _clear()
+
+
+def _extend():
+    # s.extend(t) or s += t: extends s with the contents of t
+    # (for the most part the same as s[len(s):len(s)] = t)
+    global num_list1
+    num_list1.extend([1, 2, 3, 4, 5])
+    num_list1 += [1, 2, 3]
+    print(num_list1)
+
+
+# _extend()
 
 
 def _insert():

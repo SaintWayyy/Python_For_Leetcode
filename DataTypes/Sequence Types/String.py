@@ -90,41 +90,64 @@ def str_format():
 
     # The * operator for sequence unpacking
     print(*"abc")
-    print('{2}, {1}, {0}'.format(*'abc'))
+    print('{2}, {1}, {0}'.format(*'abcdefg'))
+
+    hello = "hello"
+    world = "world"
+    print(f"{hello} {world}")
 
 
 # str_format()
+
 
 def str_islower():
     # str.islower()
     # Return True if all cased characters in the string are lowercase
     # and there is at least one cased character, False otherwise.
-    pass
+    print("abc".islower())
+    print("Abc".islower())
+
+
+# str_islower()
 
 
 def str_isupper():
     # str.isupper()
     # Return True if all cased characters in the string are uppercase
     # and there is at least one cased character, False otherwise.
-    pass
+    print("ABC".isupper())
+    print("AbC".isupper())
+
+
+# str_isupper()
 
 
 def str_join():
     # str.join(iterable)
     # Return a string which is the concatenation of the strings in iterable.
-    pass
+    # The separator between elements is the string providing this method.
+    print(":".join(["a", 'b', 'c']))
+
+
+# str_join()
 
 
 def str_lower():
     # str.lower()
     # Return a copy of the string with all the cased characters converted to lowercase.
-    pass
+    print("ABC".lower())
+
+
+# str_lower()
 
 
 def str_upper():
     # str.upper()
     # Return a copy of the string with all the cased characters converted to uppercase.
-    pass
+    print("abc".upper())
+
+
+# str_upper()
 
 
 def str_strip():
@@ -133,7 +156,10 @@ def str_strip():
     # The chars argument is a string specifying the set of characters to be removed.
     # If omitted or None, the chars argument defaults to removing whitespace.
     # The chars argument is not a prefix or suffix; rather, all combinations of its values are stripped:
-    pass
+    print("     abc       ".strip())
+
+
+# str_strip()
 
 
 def str_lstrip():
@@ -142,7 +168,10 @@ def str_lstrip():
     # The chars argument is a string specifying the set of characters to be removed.
     # If omitted or None, the chars argument defaults to removing whitespace.
     # The chars argument is not a prefix; rather, all combinations of its values are stripped.
-    pass
+    print("abcabc-abcabc".lstrip("abc"))
+
+
+# str_lstrip()
 
 
 def str_rstrip():
@@ -151,14 +180,20 @@ def str_rstrip():
     # The chars argument is a string specifying the set of characters to be removed.
     # If omitted or None, the chars argument defaults to removing whitespace.
     # The chars argument is not a suffix; rather, all combinations of its values are stripped.
-    pass
+    print("abcabc-abcabc".rstrip("abc"))
+
+
+# str_rstrip()
 
 
 def str_replace():
     # str.replace(old, new[, count])
     # Return a copy of the string with all occurrences of substring old replaced by new.
     # If the optional argument count is given, only the first count occurrences are replaced.
-    pass
+    print("hello world".replace("hello", "hi"))
+
+
+# str_replace()
 
 
 def str_split():
@@ -167,6 +202,9 @@ def str_split():
     # If maxsplit is given, at most maxsplit splits are done (thus, the list will have at most maxsplit+1 elements).
     # If maxsplit is not specified or -1, then there is no limit on the number of splits (all possible splits are made).
     pass
+
+
+str_split()
 
 
 def str_rsplit():
